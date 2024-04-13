@@ -1,0 +1,214 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: ml/training/split_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: ml/training/split_doc
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - ml/training/kfold
+  - ml/training/train
+  - ml/training/split
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ml/training/configurations
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks: []
+  uuid: ml/training/configurations
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    global_data_product:
+      uuid: training_set_v0
+  downstream_blocks:
+  - ml/training/split
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: training_set_v0
+  retry_config: null
+  status: executed
+  timeout: null
+  type: global_data_product
+  upstream_blocks: []
+  uuid: training_set_v0
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    dynamic: false
+  downstream_blocks:
+  - ml/training/train
+  - ml/training/kfold
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ml/training/split
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks:
+  - training_set_v0
+  - ml/training/configurations
+  uuid: ml/training/split
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    dynamic: true
+  downstream_blocks:
+  - ml/training/train
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ml/training/kfold
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks:
+  - ml/training/split
+  - ml/training/configurations
+  uuid: ml/training/kfold
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: ml/training/train_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: ml/training/train_doc
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - ml/training/evaluate
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ml/training/train
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - ml/training/split
+  - ml/training/kfold
+  - ml/training/configurations
+  uuid: ml/training/train
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: ml/training/evaluate_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: ml/training/evaluate_doc
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    reduce_output: true
+  downstream_blocks:
+  - ml/training/explain
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ml/training/evaluate
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - ml/training/train
+  uuid: ml/training/evaluate
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: ml/training/explain_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: ml/training/explain_doc
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ml/training/explain
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - ml/training/evaluate
+  uuid: ml/training/explain
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-04-13 19:46:52.340112+00:00'
+data_integration: null
+description: Use the training data to teach the machine learning model to make accurate
+  predictions. Evaluate the trained model's performance on a test set.
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: ml_training
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: ml_training
+variables_dir: /root/.mage_data/machine_learning
+widgets: []

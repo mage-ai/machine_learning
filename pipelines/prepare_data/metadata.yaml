@@ -280,9 +280,9 @@ blocks:
   downstream_blocks:
   - feature_profiles_for_prepare_data/feature_engineering/impute_features
   - prepare_data/feature_engineering/numerical_features
-  - prepare_data/feature_engineering/scale_feature
   - prepare_data/feature_engineering/encode_features
   - prepare_data/feature_engineering/select_features
+  - prepare_data/feature_engineering/scale_feature
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -340,14 +340,14 @@ blocks:
   language: python
   name: prepare_data/feature_engineering/scale_feature
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: custom
   upstream_blocks:
-  - prepare_data/feature_engineering/impute_features
   - prepare_data/feature_engineering/numerical_features
+  - prepare_data/feature_engineering/impute_features
   uuid: prepare_data/feature_engineering/scale_feature
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: teal
   configuration: {}
   downstream_blocks:
@@ -411,7 +411,7 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: prepare_data/feature_engineering/select_features_doc
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:

@@ -13,7 +13,7 @@ from sklearn.preprocessing import (
 SCALERS = [
     ('max_abs_scaler', MaxAbsScaler()),
     ('min_max_scaler', MinMaxScaler()),
-    ('normalizer', Normalizer(), dict(axis=0)),
+    ('normalizer', Normalizer()),
     ('power_transformer', PowerTransformer()),
     ('quantile_transformer', QuantileTransformer()),
     ('robust_scaler', RobustScaler()),

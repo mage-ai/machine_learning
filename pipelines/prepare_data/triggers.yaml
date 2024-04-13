@@ -9,5 +9,5 @@ triggers:
     landing_time_enabled: true
   sla: null
   start_time: 2023-06-26 00:00:00+00:00
-  status: active
+  status: inactive
   variables: {}
