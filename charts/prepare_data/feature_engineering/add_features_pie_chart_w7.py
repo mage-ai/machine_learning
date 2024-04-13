@@ -1,0 +1,1 @@
+x = df_1['number_of_email_theme_shopping']

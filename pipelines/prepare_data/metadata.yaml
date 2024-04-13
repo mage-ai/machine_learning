@@ -135,7 +135,7 @@ blocks:
   language: python
   name: prepare_data/user_emails
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
@@ -170,7 +170,7 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: prepare_data/feature_engineering/add_and_combine_features_doc
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -204,10 +204,11 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: prepare_data/feature_engineering/remove_and_repair_features_doc
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
-  downstream_blocks: []
+  downstream_blocks:
+  - prepare_data/feature_engineering/add_features
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -220,6 +221,215 @@ blocks:
   upstream_blocks:
   - prepare_data/feature_engineering/add_and_combine_features
   uuid: prepare_data/feature_engineering/remove_and_repair_features
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: prepare_data/feature_engineering/add_features_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: prepare_data/feature_engineering/add_features_doc
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - prepare_data/feature_engineering/add_features_histogram_o0
+  - prepare_data/feature_engineering/add_features_histogram_r2
+  - prepare_data/feature_engineering/add_features_pie_chart_w7
+  - prepare_data/feature_engineering/add_features_histogram_d8
+  - feature_profiles_for_prepare_data/feature_engineering/add_features
+  - summary_overview_for_prepare_data/feature_engineering/add_features
+  - prepare_data/feature_engineering/impute_features
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/feature_engineering/add_features
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - prepare_data/feature_engineering/remove_and_repair_features
+  uuid: prepare_data/feature_engineering/add_features
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: prepare_data/feature_engineering/impute_features_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: prepare_data/feature_engineering/impute_features_doc
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - feature_profiles_for_prepare_data/feature_engineering/impute_features
+  - prepare_data/feature_engineering/numerical_features
+  - prepare_data/feature_engineering/scale_feature
+  - prepare_data/feature_engineering/encode_features
+  - prepare_data/feature_engineering/select_features
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/feature_engineering/impute_features
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - prepare_data/feature_engineering/add_features
+  uuid: prepare_data/feature_engineering/impute_features
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: prepare_data/feature_engineering/scale_features_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: prepare_data/feature_engineering/scale_features_doc
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    dynamic: true
+  downstream_blocks:
+  - prepare_data/feature_engineering/scale_feature
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/feature_engineering/numerical_features
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - prepare_data/feature_engineering/impute_features
+  uuid: prepare_data/feature_engineering/numerical_features
+- all_upstream_blocks_executed: true
+  color: teal
+  configuration:
+    reduce_output: true
+  downstream_blocks:
+  - prepare_data/feature_engineering/scale_features
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/feature_engineering/scale_feature
+  retry_config: null
+  status: updated
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - prepare_data/feature_engineering/impute_features
+  - prepare_data/feature_engineering/numerical_features
+  uuid: prepare_data/feature_engineering/scale_feature
+- all_upstream_blocks_executed: false
+  color: teal
+  configuration: {}
+  downstream_blocks:
+  - prepare_data/feature_engineering/select_features
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/feature_engineering/scale_features
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - prepare_data/feature_engineering/scale_feature
+  uuid: prepare_data/feature_engineering/scale_features
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: prepare_data/feature_engineering/encode_features_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: prepare_data/feature_engineering/encode_features_doc
+- all_upstream_blocks_executed: true
+  color: pink
+  configuration: {}
+  downstream_blocks:
+  - prepare_data/feature_engineering/select_features
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/feature_engineering/encode_features
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - prepare_data/feature_engineering/impute_features
+  uuid: prepare_data/feature_engineering/encode_features
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: prepare_data/feature_engineering/select_features_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: prepare_data/feature_engineering/select_features_doc
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - feature_profiles_for_prepare_data/feature_engineering/select_features
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/feature_engineering/select_features
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - prepare_data/feature_engineering/scale_features
+  - prepare_data/feature_engineering/encode_features
+  - prepare_data/feature_engineering/impute_features
+  uuid: prepare_data/feature_engineering/select_features
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
@@ -244,7 +454,7 @@ spark_config: {}
 tags: []
 type: python
 uuid: prepare_data
-variables_dir: /home/src/mage_data/machine_learning
+variables_dir: /root/.mage_data/machine_learning
 widgets:
 - all_upstream_blocks_executed: true
   color: null
@@ -459,7 +669,7 @@ widgets:
   upstream_blocks:
   - prepare_data/email_content
   uuid: prepare_data/email_content_time_series_line_chart_y2
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     chart_type: table
@@ -480,7 +690,7 @@ widgets:
   upstream_blocks:
   - prepare_data/user_emails
   uuid: summary_overview_for_prepare_data/user_emails
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     chart_type: table
@@ -501,7 +711,7 @@ widgets:
   upstream_blocks:
   - prepare_data/user_emails
   uuid: feature_profiles_for_prepare_data/user_emails
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     buckets: 7
@@ -520,7 +730,7 @@ widgets:
   upstream_blocks:
   - prepare_data/user_emails
   uuid: prepare_data/user_emails_pie_chart_k5
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     chart_type: time series bar chart
@@ -543,3 +753,163 @@ widgets:
   upstream_blocks:
   - prepare_data/user_emails
   uuid: prepare_data/user_emails_time_series_bar_chart_p7
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    buckets: 10
+    chart_type: histogram
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/feature_engineering/add_features_histogram_o0
+  retry_config: null
+  status: executed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - prepare_data/feature_engineering/add_features
+  uuid: prepare_data/feature_engineering/add_features_histogram_o0
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    buckets: 10
+    chart_type: histogram
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/feature_engineering/add_features_histogram_r2
+  retry_config: null
+  status: executed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - prepare_data/feature_engineering/add_features
+  uuid: prepare_data/feature_engineering/add_features_histogram_r2
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    buckets: 7
+    chart_type: pie chart
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/feature_engineering/add_features_pie chart_w7
+  retry_config: null
+  status: executed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - prepare_data/feature_engineering/add_features
+  uuid: prepare_data/feature_engineering/add_features_pie_chart_w7
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    buckets: 10
+    chart_type: histogram
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/feature_engineering/add_features_histogram_d8
+  retry_config: null
+  status: executed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - prepare_data/feature_engineering/add_features
+  uuid: prepare_data/feature_engineering/add_features_histogram_d8
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_type: table
+    height: 3000
+    index: stats
+    x: columns
+    y: rows
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: feature profiles for prepare_data/feature_engineering/add_features
+  retry_config: null
+  status: executed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - prepare_data/feature_engineering/add_features
+  uuid: feature_profiles_for_prepare_data/feature_engineering/add_features
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_type: table
+    height: 3000
+    index: stats
+    x: headers
+    y: rows
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: summary_overview_for_prepare_data/feature_engineering/add_features
+  retry_config: null
+  status: executed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - prepare_data/feature_engineering/add_features
+  uuid: summary_overview_for_prepare_data/feature_engineering/add_features
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_type: table
+    height: 3000
+    index: stats
+    x: columns
+    y: rows
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: feature profiles for prepare_data/feature_engineering/impute_features
+  retry_config: null
+  status: executed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - prepare_data/feature_engineering/impute_features
+  uuid: feature_profiles_for_prepare_data/feature_engineering/impute_features
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    chart_type: table
+    height: 3000
+    index: stats
+    x: columns
+    y: rows
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: feature profiles for prepare_data/feature_engineering/select_features
+  retry_config: null
+  status: executed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - prepare_data/feature_engineering/select_features
+  uuid: feature_profiles_for_prepare_data/feature_engineering/select_features
