@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import shap
 
-from mage_ai.settings.repo import get_repo_path
 
 if 'data_exporter' not in globals():
     from mage_ai.data_preparation.decorators import data_exporter
@@ -14,9 +13,6 @@ if 'data_exporter' not in globals():
 @data_exporter
 def export_data(evaluation, data,  *args, **kwargs):
     label_classes, X, y = data
-
-    best_model = None
-    best_roc_auc = None
 
     for model_file_path, metrics in evaluation:
         model_name = os.path.basename(model_file_path)
@@ -100,29 +96,3 @@ def export_data(evaluation, data,  *args, **kwargs):
 
         # For a detailed view of the first prediction
         shap.force_plot(explainer.expected_value, shap_values[0,:], X.iloc[0,:])
-
-        if best_model is None or roc_auc > best_roc_auc:
-            best_model = model
-            best_model_name = model_name
-            best_roc_auc = roc_auc
-            
-    print(f'Best model (best_model_name): {best_roc_auc} ROC AUC')
-
-    model_file_path = os.path.join(
-        get_repo_path(), 
-        'models', 
-        'ml', 
-        'production',
-        'v0', 
-        kwargs.get('ds', 'now'),
-        f'model.joblib',
-    )
-    os.makedirs(os.path.dirname(model_file_path), exist_ok=True)
-
-    with open(model_file_path, 'wb') as f:
-        joblib.dump(model, f, compress='zlib')
-
-    return [
-        best_model_name,
-        best_roc_auc,
-    ]

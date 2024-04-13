@@ -28,7 +28,7 @@ if 'test' not in globals():
 
 
 @custom
-def transform_custom(column, df, *args, **kwargs):
+def transform_custom(df, column, *args, **kwargs):
     columns = []
 
     for scaler_name, scaler in SCALERS:

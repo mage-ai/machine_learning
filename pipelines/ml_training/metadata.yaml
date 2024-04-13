@@ -116,7 +116,7 @@ blocks:
   language: python
   name: ml/training/train
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: transformer
   upstream_blocks:
@@ -139,7 +139,7 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: ml/training/evaluate_doc
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     reduce_output: true
@@ -151,7 +151,7 @@ blocks:
   language: python
   name: ml/training/evaluate
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: transformer
   upstream_blocks:
@@ -172,7 +172,7 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: ml/training/explain_doc
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks: []
@@ -182,7 +182,7 @@ blocks:
   language: python
   name: ml/training/explain
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_exporter
   upstream_blocks:

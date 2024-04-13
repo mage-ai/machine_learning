@@ -1,6 +1,10 @@
 import dateutil.parser
 import math
 
+import pandas as pd
+
+from mage_ai.data_preparation.models.pipeline import Pipeline
+
 
 if 'transformer' not in globals():
     from mage_ai.data_preparation.decorators import transformer
@@ -16,7 +20,22 @@ DATETIME_COLUMNS = [
 
 
 @transformer
-def transform(df, *args, **kwargs):
+def transform(*args, **kwargs):
+    df = pd.DataFrame()
+
+    trigger = kwargs.get('trigger', {})
+    upstream_blocks = trigger.get('upstream_blocks', [])
+    for opts in upstream_blocks:
+        pipeline = Pipeline.get(opts['pipeline_uuid'])
+        block_uuid = opts['block_uuid']
+        block = pipeline.get_block(block_uuid)
+
+        execution_partition = opts.get('execution_partition')
+        variable_uuids = block.output_variables(execution_partition=execution_partition)
+        for variable_uuid in variable_uuids:
+            output = pipeline.get_block_variable(block_uuid, variable_uuid, partition=execution_partition)
+            df = pd.concat([df, output])
+    
     df.columns = [col.lower().replace(' ', '_') for col in df.columns]
     df = df.drop(columns=['id'])
 

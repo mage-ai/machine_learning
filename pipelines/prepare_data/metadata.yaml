@@ -108,24 +108,6 @@ blocks:
   uuid: prepare_data/feature_engineering/add_and_combine_features_doc
 - all_upstream_blocks_executed: true
   color: null
-  configuration:
-    global_data_product:
-      uuid: core_data_users_v0
-  downstream_blocks:
-  - prepare_data/feature_engineering/remove_and_repair_features
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: python
-  name: core_data/users/v0
-  retry_config: null
-  status: not_executed
-  timeout: null
-  type: global_data_product
-  upstream_blocks: []
-  uuid: core_data/users/v0
-- all_upstream_blocks_executed: true
-  color: null
   configuration: {}
   downstream_blocks: []
   executor_config: null
@@ -139,7 +121,7 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: prepare_data/feature_engineering/remove_and_repair_features_doc
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -150,11 +132,10 @@ blocks:
   language: python
   name: prepare_data/feature_engineering/remove_and_repair_features
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: transformer
-  upstream_blocks:
-  - core_data/users/v0
+  upstream_blocks: []
   uuid: prepare_data/feature_engineering/remove_and_repair_features
 - all_upstream_blocks_executed: true
   color: null
@@ -279,8 +260,8 @@ blocks:
   timeout: null
   type: custom
   upstream_blocks:
-  - prepare_data/feature_engineering/numerical_features
   - prepare_data/feature_engineering/impute_features
+  - prepare_data/feature_engineering/numerical_features
   uuid: prepare_data/feature_engineering/scale_feature
 - all_upstream_blocks_executed: false
   color: teal
@@ -361,9 +342,9 @@ blocks:
   timeout: null
   type: data_exporter
   upstream_blocks:
+  - prepare_data/feature_engineering/impute_features
   - prepare_data/feature_engineering/scale_features
   - prepare_data/feature_engineering/encode_features
-  - prepare_data/feature_engineering/impute_features
   uuid: prepare_data/feature_engineering/select_features
 cache_block_output_in_memory: false
 callbacks: []
