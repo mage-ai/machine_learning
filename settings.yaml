@@ -1,0 +1,20 @@
+projects:
+  __pycache__: {}
+  assets: {}
+  charts: {}
+  custom: {}
+  data_exporters: {}
+  data_loaders: {}
+  dbt: {}
+  extensions: {}
+  interactions: {}
+  machine_learning: {}
+  markdowns: {}
+  pipelines: {}
+  scratchpads: {}
+  transformers: {}
+  utils: {}
+version_control:
+  ? ''
+  : {}
+  .: {}

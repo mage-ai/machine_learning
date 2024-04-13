@@ -1,0 +1,41 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: Define problem
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: define_problem
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-04-13 12:04:21.520920+00:00'
+data_integration: null
+description: Clearly state the business problem you're trying to solve with machine
+  learning and your hypothesis for how it can be solved.
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: Define problem
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: define_problem
+variables_dir: /home/src/mage_data/machine_learning
+widgets: []
