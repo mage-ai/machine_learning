@@ -1,0 +1,99 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_loaders/prepare_data/user_profiles.py
+  downstream_blocks:
+  - prepare_data/feature_engineering/add_and_combine_features
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/user_profiles
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: prepare_data/user_profiles
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_loaders/prepare_data/email_content.py
+  downstream_blocks:
+  - prepare_data/feature_engineering/add_and_combine_features
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/email_content
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: prepare_data/email_content
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_loaders/prepare_data/user_emails.py
+  downstream_blocks:
+  - prepare_data/feature_engineering/add_and_combine_features
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/user_emails
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: prepare_data/user_emails
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: transformers/prepare_data/feature_engineering/add_and_combine_features.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/feature_engineering/add_and_combine_features
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - prepare_data/user_profiles
+  - prepare_data/email_content
+  - prepare_data/user_emails
+  uuid: prepare_data/feature_engineering/add_and_combine_features
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-04-13 22:15:30.247217+00:00'
+data_integration: null
+description: Core data users table.
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: core_data.users_v0
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: core_data_users_v0
+variables_dir: /root/.mage_data/machine_learning
+widgets: []

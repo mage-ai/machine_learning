@@ -1,3 +1,11 @@
+core_data_users_v0:
+  object_type: pipeline
+  object_uuid: core_data_users_v0
+  outdated_after:
+    seconds: 600
+  settings:
+    prepare_data/feature_engineering/add_and_combine_features:
+      partitions: 1
 training_set_v0:
   object_type: pipeline
   object_uuid: prepare_data

@@ -1,6 +1,6 @@
 triggers:
 - envs: []
-  last_enabled_at: 2024-04-13 19:38:29.608503+00:00
+  last_enabled_at: 2024-04-13 22:20:26.031594+00:00
   name: Training set v0
   pipeline_uuid: prepare_data
   schedule_interval: '@daily'
@@ -9,5 +9,5 @@ triggers:
     landing_time_enabled: true
   sla: null
   start_time: 2023-06-26 00:00:00+00:00
-  status: inactive
+  status: active
   variables: {}
