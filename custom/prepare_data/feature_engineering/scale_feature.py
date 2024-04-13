@@ -11,13 +11,13 @@ from sklearn.preprocessing import (
 
 # Adjusted SCALERS to include instances except for minmax_scale which is handled separately
 SCALERS = [
-    ('max_abs_scaler', MaxAbsScaler(),),
-    ('min_max_scaler', MinMaxScaler(),),
+    ('max_abs_scaler', MaxAbsScaler()),
+    ('min_max_scaler', MinMaxScaler()),
     ('normalizer', Normalizer(), dict(axis=0)),
-    ('power_transformer', PowerTransformer(),),
-    ('quantile_transformer', QuantileTransformer(),),
-    ('robust_scaler', RobustScaler(),),
-    ('standard_scaler', StandardScaler(),),
+    ('power_transformer', PowerTransformer()),
+    ('quantile_transformer', QuantileTransformer()),
+    ('robust_scaler', RobustScaler()),
+    ('standard_scaler', StandardScaler()),
 ]
 
 
@@ -31,7 +31,7 @@ if 'test' not in globals():
 def transform_custom(column, df, *args, **kwargs):
     columns = []
 
-    for scaler_name, scaler, opts in SCALERS:
+    for scaler_name, scaler in SCALERS:
         # Use the instantiated scaler
         scaler.fit(df[[column]])
         col = f'{column}_{scaler_name}'
