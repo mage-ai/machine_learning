@@ -1,0 +1,13 @@
+triggers:
+- envs: []
+  last_enabled_at: 2024-04-13 22:04:29.676754+00:00
+  name: Model training v0
+  pipeline_uuid: ml_training
+  schedule_interval: '@daily'
+  schedule_type: time
+  settings:
+    landing_time_enabled: true
+  sla: null
+  start_time: 2023-07-01 00:00:00+00:00
+  status: active
+  variables: {}

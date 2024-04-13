@@ -15,7 +15,6 @@ from sklearn.metrics import (
     roc_curve,
 )
 
-
 if 'transformer' not in globals():
     from mage_ai.data_preparation.decorators import transformer
 if 'test' not in globals():
