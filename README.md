@@ -116,7 +116,7 @@ Integrate the model's predictions with other business applications.
 
 ## Batch offline predictions
 
-<video src="https://github.com/mage-ai/assets/assets/1066980/5c8749aa-630e-4622-b7a9-35273feda140"></video>
+<video src="https://github.com/mage-ai/assets/assets/1066980/0ce55744-8058-4b79-8699-d09c16f6aa0e"></video>
 
 <br />
 

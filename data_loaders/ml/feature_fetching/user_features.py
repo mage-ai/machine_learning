@@ -8,7 +8,7 @@ if 'test' not in globals():
 
 
 @data_loader
-def load_data(df, configurations, *args, **kwargs):
+def load_data(configurations, df, *args, **kwargs):
     label_feature_name = configurations['label_feature_name']
     uuid_column = configurations['uuid_column']
     sort_column_name = configurations['sort_column_name']
