@@ -6,6 +6,7 @@ blocks:
       path: data_loaders/prepare_data/user_profiles.py
   downstream_blocks:
   - prepare_data/feature_engineering/add_and_combine_features
+  - prepare_data/user_profiles_time_series_line_chart_o0
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -24,6 +25,7 @@ blocks:
       path: data_loaders/prepare_data/email_content.py
   downstream_blocks:
   - prepare_data/feature_engineering/add_and_combine_features
+  - prepare_data/email_content_histogram_c5
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -96,4 +98,48 @@ tags: []
 type: python
 uuid: core_data_users_v0
 variables_dir: /root/.mage_data/machine_learning
-widgets: []
+widgets:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_type: time series line chart
+    group_by:
+    - date joined
+    metrics:
+    - aggregation: count
+      column: id
+    time_interval: original
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/user_profiles_time series line chart_o0
+  retry_config: null
+  status: executed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - prepare_data/user_profiles
+  uuid: prepare_data/user_profiles_time_series_line_chart_o0
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    buckets: 10
+    chart_type: histogram
+    group_by:
+    - number of items
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: prepare_data/email_content_histogram_c5
+  retry_config: null
+  status: executed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - prepare_data/email_content
+  uuid: prepare_data/email_content_histogram_c5

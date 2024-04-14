@@ -3,7 +3,7 @@ import math
 
 import pandas as pd
 
-from mage_ai.data_preparation.models.pipeline import Pipeline
+from mage_ai.data_preparation.models.global_data_product import GlobalDataProduct
 
 
 if 'transformer' not in globals():
@@ -21,11 +21,16 @@ DATETIME_COLUMNS = [
 
 @transformer
 def transform(*args, **kwargs):
-    df = pd.DataFrame()
-    
-    for remote_block_outputs in kwargs.get('remote_blocks', []):
-        for remote_block_output in remote_block_outputs:
-            df = pd.concat([df, remote_block_output])
+    remote_blocks = kwargs.get('remote_blocks', [])
+
+    if remote_blocks:
+        df = pd.DataFrame()
+        for remote_block_outputs in remote_blocks:
+            for remote_block_output in remote_block_outputs:
+                df = pd.concat([df, remote_block_output])
+    else:
+        global_data_product = GlobalDataProduct.get('core_data_users_v0')
+        df = list(global_data_product.get_outputs().values())[0][0]
     
     df.columns = [col.lower().replace(' ', '_') for col in df.columns]
     df = df.drop(columns=['id'])
