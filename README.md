@@ -41,7 +41,9 @@ Clearly state the business problem you're trying to solve with machine learning 
 Collect data from various sources, generate additional training data if needed, and
 perform feature engineering to transform the raw data into a set of useful input features.
 
-<video src="https://private-user-images.githubusercontent.com/1066980/322283591-d12da613-80df-45c7-bfc7-7b7fb0b02d5d.mp4" width="300" />
+<video src="https://private-user-images.githubusercontent.com/1066980/322283591-d12da613-80df-45c7-bfc7-7b7fb0b02d5d.mp4" />
+
+<br />
 
 1. The pipeline [`core_data_users_v0`](http://localhost:6789/pipelines/core_data_users_v0/edit)
    contains 3 tables that are joined together.
