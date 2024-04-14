@@ -37,5 +37,5 @@ spark_config: {}
 tags: []
 type: python
 uuid: define_problem
-variables_dir: /home/src/mage_data/machine_learning
+variables_dir: /root/.mage_data/machine_learning
 widgets: []
