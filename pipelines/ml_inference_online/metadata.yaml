@@ -24,7 +24,7 @@ blocks:
   language: python
   name: ml_online_inference
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: custom
   upstream_blocks: []

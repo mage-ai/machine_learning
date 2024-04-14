@@ -39,10 +39,10 @@ def load_model(model_training_global_data_product_uuid: str):
 def transform_custom(*args, **kwargs):
     df = fetch_features(
         user_ids=kwargs.get('user_ids'), 
-        global_data_product_uuid=kwargs.get('global_data_product_uuid'),
+        global_data_product_uuid=kwargs.get('global_data_product_uuid', 'user_feature_store'),
     )
 
-    model = load_model(kwargs.get('model_training_global_data_product_uuid'))
+    model = load_model(kwargs.get('model_training_global_data_product_uuid', 'ml_model_training'))
     y_pred = model.predict(df)
 
     return y_pred
