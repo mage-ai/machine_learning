@@ -41,7 +41,7 @@ Clearly state the business problem you're trying to solve with machine learning 
 Collect data from various sources, generate additional training data if needed, and
 perform feature engineering to transform the raw data into a set of useful input features.
 
-<video src="https://github.com/mage-ai/assets/assets/1066980/d3e47eda-b6bf-44de-afc7-b892930c6e5c"></video>
+<video src="https://github.com/mage-ai/assets/assets/1066980/5c8749aa-630e-4622-b7a9-35273feda140"></video>
 
 <br />
 
