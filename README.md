@@ -27,7 +27,7 @@
 Clearly state the business problem you're trying to solve with machine learning and your hypothesis for how it can be solved.
 
 <video
-    src="https://github.com/mage-ai/assets/raw/main/machine-learning/videos/core-data-users.mp4">
+    src="https://github.com/mage-ai/assets/blame/main/machine-learning/videos/users.mp4?raw=true">
 </video>
 
 1. Open pipeline [`define_problem`](http://localhost:6789/pipelines/define_problem/edit).
