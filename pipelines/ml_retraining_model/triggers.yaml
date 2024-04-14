@@ -1,0 +1,13 @@
+triggers:
+- envs: []
+  last_enabled_at: 2024-04-14 20:18:28.922118+00:00
+  name: Every 2 hours
+  pipeline_uuid: ml_retraining_model
+  schedule_interval: 0 */2 * * *
+  schedule_type: time
+  settings:
+    skip_if_previous_running: true
+  sla: null
+  start_time: 2024-04-01 20:17:00+00:00
+  status: active
+  variables: {}
