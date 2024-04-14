@@ -24,7 +24,15 @@
 
 ## Setup
 
-1. TBD
+1. Clone the repository: `git clone https://github.com/mage-ai/machine_learning.git`.
+    1. Stay in the same directory that you executed this command in; don’t change directory.
+1. Run Docker:
+    ```bash
+    docker run -it -p 6789:6789 -v $(pwd):/home/src mageai/mageai /app/run_app.sh mage start machine_learning
+    ```
+
+    If you don’t use MacOS or Linux, check out other examples in Mage’s [quick start guide](https://docs.mage.ai/getting-started/setup).
+1. Open a browser and go to [http://localhost:6789](http://localhost:6789).
 
 ---
 

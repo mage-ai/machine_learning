@@ -1,0 +1,12 @@
+triggers:
+- envs: []
+  last_enabled_at: 2024-04-14 16:18:38.359711+00:00
+  name: Real-time predictions API endpoint
+  pipeline_uuid: ml_playground
+  schedule_interval: null
+  schedule_type: api
+  settings: null
+  sla: null
+  start_time: 2024-04-14 16:17:00+00:00
+  status: active
+  variables: {}

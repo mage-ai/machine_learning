@@ -3,7 +3,10 @@ blocks:
   - description: "Interact with the ML model\u2019s real-time predictions. All the\
       \ required fields have a default value in the code. You can run the block without\
       \ having to fill in any fields."
+    layout: []
     name: Customize the API request
+    permissions: []
     uuid: playground/online/predictions.yaml
+    variables: {}
 layout: []
 permissions: []

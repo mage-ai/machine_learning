@@ -24,7 +24,7 @@ blocks:
   language: python
   name: playground/online/predictions
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: custom
   upstream_blocks: []

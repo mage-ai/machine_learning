@@ -1,5 +1,7 @@
 inputs:
   boolean:
+    options: []
+    style: null
     type: switch
   numbers:
     options:
@@ -15,8 +17,11 @@ inputs:
       value: '500'
     - label: User ID 1000
       value: '1000'
+    style: null
     type: checkbox
   text input:
+    options: []
+    style: null
     type: text_field
 layout:
 - - variable: pipeline_uuid
@@ -44,65 +49,85 @@ variables:
     description: ' Block UUID to execute a run.'
     input: text input
     name: Block UUID
+    required: null
     types:
     - string
+    uuid: null
   incomplete_only:
     description: If true and `run_upstream_blocks` is true, then only the incomplete
       upstream blocks are run.
     input: boolean
     name: Run incomplete upstream blocks only
+    required: null
     types:
     - boolean
+    uuid: null
   pipeline_uuid:
     description: The pipeline that the block you want to run belongs to.
     input: text input
     name: Pipeline UUID
+    required: null
     types:
     - string
+    uuid: null
   probability:
     description: Instead of getting predictions of the outcome, get the probability
       of each possible outcome for every user ID.
     input: boolean
     name: Probability
+    required: null
     types:
     - boolean
+    uuid: null
   project:
     description: "The project the pipeline is in; omit if you don\u2019t have multi-project\
       \ platform setup."
     input: text input
     name: Project name
+    required: null
     types:
     - string
+    uuid: null
   record:
     description: If true, a pipeline run and block run are created for each API request.
     input: boolean
     name: Record
+    required: null
     types:
     - boolean
+    uuid: null
   run_upstream_blocks:
     description: If true, the targeted block will run all its upstream blocks before
       running itself.
     input: boolean
     name: Run upstream blocks
+    required: null
     types:
     - boolean
+    uuid: null
   store_variables:
     description: If true, the output of the block is stored like any other block run.
     input: boolean
     name: Store variables
+    required: null
     types:
     - boolean
+    uuid: null
   token:
     description: "Unique token for making authenticated API requests. This token comes\
       \ from the pipeline\u2019s trigger."
     input: text input
     name: API token
+    required: true
     types:
     - string
+    uuid: null
   user_ids:
     description: A list of user IDs (1 - 1800) to get predictions for.
     input: numbers
     name: User IDs
+    required: null
     types:
     - list
     - integer
+    uuid: null

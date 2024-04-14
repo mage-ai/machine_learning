@@ -23,7 +23,7 @@ def transform_custom(*args, **kwargs):
     run_upstream_blocks = kwargs.get('run_upstream_blocks', False)
     incomplete_only = kwargs.get('incomplete_only', False)
 
-    token = kwargs.get('token', '2ef187c9da5e41ba915f07c0f000197a')
+    token = kwargs.get('token', 'ec6bdfb8b27f4dc2a2c03d28b2de2876')
 
     # Define the URL of the API endpoint
     url = 'http://localhost:6789/api/runs'
