@@ -14,6 +14,67 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: ml/inference/offline/overview_doc
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    global_data_product:
+      settings:
+        ml/feature_fetching/user_feature_store:
+          partitions: 1
+        ml/feature_fetching/user_features:
+          partitions: 1
+      uuid: user_feature_store
+  downstream_blocks:
+  - ml/inference/offline/inference
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: User feature store
+  retry_config: {}
+  status: failed
+  timeout: null
+  type: global_data_product
+  upstream_blocks: []
+  uuid: user_feature_store
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    global_data_product:
+      outdated_after:
+        seconds: 3600
+      uuid: ml_model_training
+  downstream_blocks:
+  - ml/inference/offline/inference
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ML model training
+  retry_config: {}
+  status: failed
+  timeout: null
+  type: global_data_product
+  upstream_blocks: []
+  uuid: ml_model_training
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - ml/inference/offline/inference_pie_chart_e7
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ml/inference/offline/inference
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - user_feature_store
+  - ml_model_training
+  uuid: ml/inference/offline/inference
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
@@ -37,4 +98,24 @@ tags: []
 type: python
 uuid: ml_inference_offline
 variables_dir: /root/.mage_data/machine_learning
-widgets: []
+widgets:
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    buckets: 7
+    chart_type: pie chart
+    group_by: []
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ml/inference/offline/inference_pie chart_e7
+  retry_config: null
+  status: executed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - ml/inference/offline/inference
+  uuid: ml/inference/offline/inference_pie_chart_e7

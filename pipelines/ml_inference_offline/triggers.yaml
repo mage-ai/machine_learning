@@ -1,0 +1,13 @@
+triggers:
+- envs: []
+  last_enabled_at: 2024-04-14 10:40:22.501527+00:00
+  name: Daily offline predictions
+  pipeline_uuid: ml_inference_offline
+  schedule_interval: '@daily'
+  schedule_type: time
+  settings:
+    landing_time_enabled: true
+  sla: null
+  start_time: 2023-07-01 00:00:00+00:00
+  status: active
+  variables: {}

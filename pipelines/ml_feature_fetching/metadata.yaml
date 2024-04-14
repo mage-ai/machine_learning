@@ -121,7 +121,7 @@ blocks:
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config:
-  block_run_limit: 100
+  block_run_limit: 2000
 conditionals: []
 created_at: '2024-04-14 07:41:14.713313+00:00'
 data_integration: null

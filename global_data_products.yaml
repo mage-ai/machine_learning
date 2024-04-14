@@ -6,6 +6,22 @@ core_data_users_v0:
   settings:
     prepare_data/feature_engineering/add_and_combine_features:
       partitions: 1
+ml_model_training:
+  object_type: pipeline
+  object_uuid: ml_training
+  outdated_after:
+    seconds: 3600
+  settings:
+    ml/training/explain:
+      partitions: 1
+ml_offline_predictions:
+  object_type: pipeline
+  object_uuid: ml_inference_offline
+  outdated_after:
+    seconds: 86400
+  settings:
+    ml/inference/offline/inference:
+      partitions: 1
 training_set_v0:
   object_type: pipeline
   object_uuid: prepare_data
@@ -13,3 +29,14 @@ training_set_v0:
     seconds: 3600
   settings:
     prepare_data/feature_engineering/select_features: {}
+user_feature_store:
+  object_type: pipeline
+  object_uuid: ml_feature_fetching
+  outdated_after:
+    seconds: 86400
+    weeks: null
+  settings:
+    ml/feature_fetching/user_feature_store:
+      partitions: 1
+    ml/feature_fetching/user_features:
+      partitions: 1

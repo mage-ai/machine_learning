@@ -40,7 +40,7 @@ def transform(configurations, training_set, split_indexes, *args, **kwargs):
         get_repo_path(), 
         'models', 
         'ml', 
-        kwargs['ds']
+        kwargs.get('ds', 'now'),
         f'model_{split_index}.joblib',
     )
     os.makedirs(os.path.dirname(model_file_path), exist_ok=True)

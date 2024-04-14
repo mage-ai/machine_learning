@@ -123,6 +123,7 @@ def export_data(data, evaluation,  *args, **kwargs):
         joblib.dump(model, f, compress='zlib')
 
     return [
+        model_file_path,
         best_model_name,
         best_roc_auc,
     ]

@@ -2,3 +2,21 @@ components:
   header:
     media:
       url: https://raw.githubusercontent.com/mage-ai/assets/main/mascots/fire/charging.svg
+pages:
+  pipelines:
+    edit:
+      buttons:
+        block:
+          add:
+            items:
+              - global_data_product
+              - markdown
+              - data_loader
+            items_more:
+              - custom
+              - transformer
+              - data_exporter
+              - templates/list
+              - templates/new
+              - sensor
+              - dbt
