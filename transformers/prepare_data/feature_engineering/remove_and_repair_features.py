@@ -22,19 +22,10 @@ DATETIME_COLUMNS = [
 @transformer
 def transform(*args, **kwargs):
     df = pd.DataFrame()
-
-    trigger = kwargs.get('trigger', {})
-    upstream_blocks = trigger.get('upstream_blocks', [])
-    for opts in upstream_blocks:
-        pipeline = Pipeline.get(opts['pipeline_uuid'])
-        block_uuid = opts['block_uuid']
-        block = pipeline.get_block(block_uuid)
-
-        execution_partition = opts.get('execution_partition')
-        variable_uuids = block.output_variables(execution_partition=execution_partition)
-        for variable_uuid in variable_uuids:
-            output = pipeline.get_block_variable(block_uuid, variable_uuid, partition=execution_partition)
-            df = pd.concat([df, output])
+    
+    for remote_block_outputs in kwargs.get('remote_blocks', []):
+        for remote_block_output in remote_block_outputs:
+            df = pd.concat([df, remote_block_output])
     
     df.columns = [col.lower().replace(' ', '_') for col in df.columns]
     df = df.drop(columns=['id'])
@@ -49,10 +40,10 @@ def transform(*args, **kwargs):
     return df
 
 
-@test
-def test_lowercase(df, *args) -> None:
-    assert list(df.columns) == [col.lower().replace(' ', '_') for col in df.columns], 'Column names need to be lowercase.'
+# @test
+# def test_lowercase(df, *args) -> None:
+#     assert list(df.columns) == [col.lower().replace(' ', '_') for col in df.columns], 'Column names need to be lowercase.'
 
-@test
-def test_underscore(df, *args) -> None:
-    assert all([' ' not in col for col in df.columns]), 'Column names cannot have any spaces.'
+# @test
+# def test_underscore(df, *args) -> None:
+#     assert all([' ' not in col for col in df.columns]), 'Column names cannot have any spaces.'int

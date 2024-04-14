@@ -36,6 +36,48 @@ blocks:
   color: null
   configuration:
     global_data_product:
+      outdated_after:
+        seconds: 3600
+      settings:
+        prepare_data/feature_engineering/add_and_combine_features:
+          partitions: 1
+      uuid: core_data_users_v0
+  downstream_blocks:
+  - core_data_users_v0/prepare_data
+  - training_set_v0
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: core_data.users_v0
+  retry_config: {}
+  status: executed
+  timeout: null
+  type: global_data_product
+  upstream_blocks: []
+  uuid: core_data_users_v0
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_loaders/core_data_users_v0/prepare_data.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: core_data_users_v0/prepare_data
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks:
+  - core_data_users_v0
+  uuid: core_data_users_v0/prepare_data
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    global_data_product:
       uuid: training_set_v0
   downstream_blocks:
   - ml/training/split
@@ -45,12 +87,13 @@ blocks:
   language: python
   name: training_set_v0
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: global_data_product
-  upstream_blocks: []
+  upstream_blocks:
+  - core_data_users_v0
   uuid: training_set_v0
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     dynamic: false
@@ -68,10 +111,10 @@ blocks:
   timeout: null
   type: data_loader
   upstream_blocks:
-  - training_set_v0
   - ml/training/configurations
+  - training_set_v0
   uuid: ml/training/split
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     dynamic: true
@@ -87,8 +130,8 @@ blocks:
   timeout: null
   type: data_loader
   upstream_blocks:
-  - ml/training/split
   - ml/training/configurations
+  - ml/training/split
   uuid: ml/training/kfold
 - all_upstream_blocks_executed: true
   color: null
@@ -105,7 +148,7 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: ml/training/train_doc
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks:
@@ -120,9 +163,9 @@ blocks:
   timeout: null
   type: transformer
   upstream_blocks:
+  - ml/training/configurations
   - ml/training/split
   - ml/training/kfold
-  - ml/training/configurations
   uuid: ml/training/train
 - all_upstream_blocks_executed: true
   color: null
@@ -186,8 +229,8 @@ blocks:
   timeout: null
   type: data_exporter
   upstream_blocks:
-  - ml/training/evaluate
   - ml/training/split
+  - ml/training/evaluate
   uuid: ml/training/explain
 - all_upstream_blocks_executed: true
   color: null

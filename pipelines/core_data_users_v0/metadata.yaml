@@ -58,8 +58,7 @@ blocks:
   configuration:
     file_source:
       path: transformers/prepare_data/feature_engineering/add_and_combine_features.py
-  downstream_blocks:
-  - triggers/test
+  downstream_blocks: []
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -74,22 +73,6 @@ blocks:
   - prepare_data/email_content
   - prepare_data/user_emails
   uuid: prepare_data/feature_engineering/add_and_combine_features
-- all_upstream_blocks_executed: false
-  color: null
-  configuration: {}
-  downstream_blocks: []
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: python
-  name: triggers/test
-  retry_config: null
-  status: updated
-  timeout: null
-  type: data_exporter
-  upstream_blocks:
-  - prepare_data/feature_engineering/add_and_combine_features
-  uuid: triggers/test
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
