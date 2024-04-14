@@ -1,0 +1,108 @@
+inputs:
+  boolean:
+    type: switch
+  numbers:
+    options:
+    - label: User ID 1
+      value: '1'
+    - label: User ID 5
+      value: '5'
+    - label: User ID 20
+      value: '20'
+    - label: User ID 100
+      value: '100'
+    - label: User ID 500
+      value: '500'
+    - label: User ID 1000
+      value: '1000'
+    type: checkbox
+  text input:
+    type: text_field
+layout:
+- - variable: pipeline_uuid
+    width: 1
+  - variable: block_uuid
+    width: 1
+- - variable: project
+    width: 1
+  - variable: token
+    width: 1
+- - variable: user_ids
+    width: 1
+- - variable: probability
+    width: 1
+- - variable: record
+    width: 1
+  - variable: store_variables
+    width: 1
+- - variable: run_upstream_blocks
+    width: 1
+  - variable: incomplete_only
+    width: 1
+variables:
+  block_uuid:
+    description: ' Block UUID to execute a run.'
+    input: text input
+    name: Block UUID
+    types:
+    - string
+  incomplete_only:
+    description: If true and `run_upstream_blocks` is true, then only the incomplete
+      upstream blocks are run.
+    input: boolean
+    name: Run incomplete upstream blocks only
+    types:
+    - boolean
+  pipeline_uuid:
+    description: The pipeline that the block you want to run belongs to.
+    input: text input
+    name: Pipeline UUID
+    types:
+    - string
+  probability:
+    description: Instead of getting predictions of the outcome, get the probability
+      of each possible outcome for every user ID.
+    input: boolean
+    name: Probability
+    types:
+    - boolean
+  project:
+    description: "The project the pipeline is in; omit if you don\u2019t have multi-project\
+      \ platform setup."
+    input: text input
+    name: Project name
+    types:
+    - string
+  record:
+    description: If true, a pipeline run and block run are created for each API request.
+    input: boolean
+    name: Record
+    types:
+    - boolean
+  run_upstream_blocks:
+    description: If true, the targeted block will run all its upstream blocks before
+      running itself.
+    input: boolean
+    name: Run upstream blocks
+    types:
+    - boolean
+  store_variables:
+    description: If true, the output of the block is stored like any other block run.
+    input: boolean
+    name: Store variables
+    types:
+    - boolean
+  token:
+    description: "Unique token for making authenticated API requests. This token comes\
+      \ from the pipeline\u2019s trigger."
+    input: text input
+    name: API token
+    types:
+    - string
+  user_ids:
+    description: A list of user IDs (1 - 1800) to get predictions for.
+    input: numbers
+    name: User IDs
+    types:
+    - list
+    - integer

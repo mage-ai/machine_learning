@@ -20,7 +20,7 @@ ml_offline_predictions:
   outdated_after:
     seconds: 86400
   settings:
-    ml/inference/offline/inference:
+    ml/inference/offline/predictions:
       partitions: 1
 training_set_v0:
   object_type: pipeline

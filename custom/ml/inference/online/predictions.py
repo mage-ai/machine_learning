@@ -43,6 +43,10 @@ def transform_custom(*args, **kwargs):
     )
 
     model = load_model(kwargs.get('model_training_global_data_product_uuid', 'ml_model_training'))
-    y_pred = model.predict(df)
+
+    if kwargs.get('probability'):
+        y_pred = model.predict_proba(df)
+    else:
+        y_pred = model.predict(df)
 
     return y_pred

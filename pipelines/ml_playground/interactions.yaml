@@ -1,0 +1,9 @@
+blocks:
+  playground/online/predictions:
+  - description: "Interact with the ML model\u2019s real-time predictions. All the\
+      \ required fields have a default value in the code. You can run the block without\
+      \ having to fill in any fields."
+    name: Customize the API request
+    uuid: playground/online/predictions.yaml
+layout: []
+permissions: []

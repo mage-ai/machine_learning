@@ -25,7 +25,7 @@ blocks:
           partitions: 1
       uuid: user_feature_store
   downstream_blocks:
-  - ml/inference/offline/inference
+  - ml/inference/offline/predictions
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -45,7 +45,7 @@ blocks:
         seconds: 3600
       uuid: ml_model_training
   downstream_blocks:
-  - ml/inference/offline/inference
+  - ml/inference/offline/predictions
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -66,7 +66,7 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: python
-  name: ml/inference/offline/inference
+  name: ml/inference/offline/predictions
   retry_config: null
   status: executed
   timeout: null
@@ -74,7 +74,7 @@ blocks:
   upstream_blocks:
   - user_feature_store
   - ml_model_training
-  uuid: ml/inference/offline/inference
+  uuid: ml/inference/offline/predictions
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
@@ -117,5 +117,5 @@ widgets:
   timeout: null
   type: chart
   upstream_blocks:
-  - ml/inference/offline/inference
+  - ml/inference/offline/predictions
   uuid: ml/inference/offline/inference_pie_chart_e7

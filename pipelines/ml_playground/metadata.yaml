@@ -7,40 +7,40 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: markdown
-  name: ml/inference/online/inference_doc
+  name: playground/online/predictions_doc
   retry_config: null
   status: updated
   timeout: null
   type: markdown
   upstream_blocks: []
-  uuid: ml/inference/online/inference_doc
+  uuid: playground/online/predictions_doc
 - all_upstream_blocks_executed: true
-  color: pink
+  color: teal
   configuration: {}
   downstream_blocks: []
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: ml/inference/online/predictions
+  name: playground/online/predictions
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: custom
   upstream_blocks: []
-  uuid: ml/inference/online/predictions
+  uuid: playground/online/predictions
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
 conditionals: []
-created_at: '2024-04-14 10:44:02.692474+00:00'
+created_at: '2024-04-14 12:53:08.244333+00:00'
 data_integration: null
-description: Serve real-time predictions via API endpoint.
+description: Interact with the ML model’s real-time predictions.
 executor_config: {}
 executor_count: 1
 executor_type: null
 extensions: {}
-name: ML inference online
+name: ML playground
 notification_config: {}
 remote_variables_dir: null
 retry_config: {}
@@ -50,12 +50,6 @@ settings:
 spark_config: {}
 tags: []
 type: python
-uuid: ml_inference_online
-variables:
-  global_data_product_uuid: user_feature_store
-  model_training_global_data_product_uuid: ml_model_training
-  user_ids:
-  - 1
-  - 5
+uuid: ml_playground
 variables_dir: /root/.mage_data/machine_learning
 widgets: []

@@ -1,0 +1,17 @@
+triggers:
+- envs: []
+  last_enabled_at: 2024-04-14 12:51:58.329777+00:00
+  name: Online inference API endpoint
+  pipeline_uuid: ml_inference_online
+  schedule_interval: null
+  schedule_type: api
+  settings: null
+  sla: null
+  start_time: 2024-04-14 12:37:00+00:00
+  status: active
+  variables:
+    global_data_product_uuid: user_feature_store
+    model_training_global_data_product_uuid: ml_model_training
+    user_ids:
+    - 1
+    - 5
