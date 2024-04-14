@@ -28,12 +28,12 @@ Clearly state the business problem you're trying to solve with machine learning 
 
 <br />
 
-<video src="https://github.com/mage-ai/assets/assets/1066980/23d45e9e-cd03-4598-973d-590008788eb6"></video>
+1. Open pipeline [`define_problem`](http://localhost:6789/pipelines/define_problem/edit).
+1. Define the problem and your hypothesis.
 
 <br />
 
-1. Open pipeline [`define_problem`](http://localhost:6789/pipelines/define_problem/edit).
-1. Define the problem and your hypothesis.
+<video src="https://github.com/mage-ai/assets/assets/1066980/23d45e9e-cd03-4598-973d-590008788eb6"></video>
 
 <br />
 
@@ -41,10 +41,6 @@ Clearly state the business problem you're trying to solve with machine learning 
 
 Collect data from various sources, generate additional training data if needed, and
 perform feature engineering to transform the raw data into a set of useful input features.
-
-<br />
-
-<video src="https://github.com/mage-ai/assets/assets/1066980/5c8749aa-630e-4622-b7a9-35273feda140"></video>
 
 <br />
 
@@ -58,14 +54,22 @@ perform feature engineering to transform the raw data into a set of useful input
 
 <br />
 
+## Collecting and combining core user data
+
+<video src="https://github.com/mage-ai/assets/assets/1066980/06334154-96c1-48ae-9045-615175184ffa"></video>
+
+<br />
+
+## Feature engineering
+
+<video src="https://github.com/mage-ai/assets/assets/1066980/5c8749aa-630e-4622-b7a9-35273feda140"></video>
+
+<br />
+
 # 🦾 Train and evaluate
 
 Use the training data to teach the machine learning model to make accurate predictions.
 Evaluate the trained model's performance on a test set.
-
-<br />
-
-<video src="https://github.com/mage-ai/assets/assets/1066980/5a4d86f8-3f0b-41c2-9127-99620bd5fe0e"></video>
 
 <br />
 
@@ -76,6 +80,10 @@ Evaluate the trained model's performance on a test set.
    It’ll provide visualizations and explain which features are important using SHAP values.
 1. Finally, this pipeline will serialize the model and its weights to disk to be used during
    the inference phase.
+
+<br />
+
+<video src="https://github.com/mage-ai/assets/assets/1066980/5a4d86f8-3f0b-41c2-9127-99620bd5fe0e"></video>
 
 <br />
 
@@ -124,14 +132,14 @@ Monitor the deployed model's prediction performance, latency, and system health 
 
 <br />
 
+1. Example coming soon.
+
+<br />
+
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/observe.png?raw=true"
     width="500"
 />
-
-1. Example coming soon.
-
-<br />
 
 # 🧪 Experiment
 
@@ -140,12 +148,14 @@ business metrics. Compare the new model's performance to a control model or prev
 
 <br />
 
+1. Example coming soon.
+
+<br />
+
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/experiment.png?raw=true"
     width="500"
 />
-
-1. Example coming soon.
 
 <br />
 
@@ -156,12 +166,14 @@ improve prediction performance.
 
 <br />
 
+1. Example coming soon.
+
+<br />
+
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/retrain.png?raw=true"
     width="500"
 />
-
-1. Example coming soon.
 
 <br />
 

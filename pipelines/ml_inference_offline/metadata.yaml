@@ -30,7 +30,7 @@ blocks:
   language: python
   name: User feature store
   retry_config: {}
-  status: failed
+  status: executed
   timeout: null
   type: global_data_product
   upstream_blocks: []
@@ -50,7 +50,7 @@ blocks:
   language: python
   name: ML model training
   retry_config: {}
-  status: failed
+  status: executed
   timeout: null
   type: global_data_product
   upstream_blocks: []
