@@ -48,12 +48,12 @@ blocks:
   language: python
   name: prepare_data/user_emails
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
   uuid: prepare_data/user_emails
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     file_source:
