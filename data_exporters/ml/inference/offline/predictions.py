@@ -13,6 +13,8 @@ def export_data(user_feature_store, model_training, *args, **kwargs):
     model_file_path = list(model_training.values())[0][0]
     with open(model_file_path, 'rb') as f:
         model = joblib.load(f)
+
+    print(user_feature_store)
         
     df_features, user_id_dicts = user_feature_store['ml/feature_fetching/user_features']
     df_user_ids = pd.DataFrame(user_id_dicts)

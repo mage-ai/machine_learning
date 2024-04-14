@@ -18,6 +18,8 @@ blocks:
   color: null
   configuration:
     global_data_product:
+      outdated_after:
+        seconds: 86400
       settings:
         ml/feature_fetching/user_features:
           partitions: 1
@@ -55,7 +57,7 @@ blocks:
   type: global_data_product
   upstream_blocks: []
   uuid: ml_model_training
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -66,7 +68,7 @@ blocks:
   language: python
   name: ml/inference/offline/predictions
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: data_exporter
   upstream_blocks:
