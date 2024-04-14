@@ -1,0 +1,61 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: ml/inference/online/inference_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: ml/inference/online/inference_doc
+- all_upstream_blocks_executed: true
+  color: pink
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ml_online_inference
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks: []
+  uuid: ml_online_inference
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-04-14 10:44:02.692474+00:00'
+data_integration: null
+description: Serve real-time predictions via API endpoint.
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: ML inference online
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: ml_inference_online
+variables:
+  global_data_product_uuid: user_feature_store
+  model_training_global_data_product_uuid: ml_model_training
+  user_ids:
+  - 1
+  - 5
+variables_dir: /root/.mage_data/machine_learning
+widgets: []
