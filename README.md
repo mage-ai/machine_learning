@@ -79,7 +79,9 @@ Deploy the trained model to a production environment to generate predictions on 
 either in real-time via an API or in batch pipelines.
 Integrate the model's predictions with other business applications.
 
-<video src="https://github.com/mage-ai/assets/assets/1066980/5c8749aa-630e-4622-b7a9-35273feda140"></video>
+## Feature store and fetching
+
+<video src="https://github.com/mage-ai/assets/assets/1066980/7deeee51-0fcb-44bf-8192-ae48b2bac0c7"></video>
 
 1. Once the model is done training and has been packaged for deployment, before we can use it to
    make predictions, we’ll need to setup our feature store that’ll serve user features on-demand

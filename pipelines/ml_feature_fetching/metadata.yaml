@@ -53,6 +53,7 @@ blocks:
   configuration: {}
   downstream_blocks:
   - ml/feature_fetching/prepare_features
+  - ml/feature_fetching/delivered_at_retain_time_series_bar_chart_m0
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -69,7 +70,8 @@ blocks:
 - all_upstream_blocks_executed: true
   color: teal
   configuration: {}
-  downstream_blocks: []
+  downstream_blocks:
+  - feature_profiles_for_ml/feature_fetching/prepare_features
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -86,8 +88,7 @@ blocks:
   color: null
   configuration:
     dynamic: false
-  downstream_blocks:
-  - feature_profiles_for_ml/feature_fetching/user_fan_out
+  downstream_blocks: []
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -98,8 +99,8 @@ blocks:
   timeout: null
   type: data_loader
   upstream_blocks:
-  - ml/feature_fetching/prepare_features
   - ml/feature_fetching/configurations
+  - ml/feature_fetching/prepare_features
   uuid: ml/feature_fetching/user_features
 cache_block_output_in_memory: false
 callbacks: []
@@ -140,11 +141,34 @@ widgets:
   executor_type: local_python
   has_callback: false
   language: python
-  name: feature profiles for ml/feature_fetching/user_fan_out
+  name: feature profiles for ml/feature_fetching/prepare_features
   retry_config: null
-  status: failed
+  status: executed
   timeout: null
   type: chart
   upstream_blocks:
-  - ml/feature_fetching/user_features
-  uuid: feature_profiles_for_ml/feature_fetching/user_fan_out
+  - ml/feature_fetching/prepare_features
+  uuid: feature_profiles_for_ml/feature_fetching/prepare_features
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_type: time series bar chart
+    group_by:
+    - email_delivered_at
+    metrics:
+    - aggregation: count
+      column: email_id
+    time_interval: original
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ml/feature_fetching/delivered_at_retain_time series bar chart_m0
+  retry_config: null
+  status: executed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - ml/feature_fetching/delivered_at_retain
+  uuid: ml/feature_fetching/delivered_at_retain_time_series_bar_chart_m0
