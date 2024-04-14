@@ -123,14 +123,14 @@ blocks:
   language: python
   name: ml/training/split
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_loader
   upstream_blocks:
   - ml/training/configurations
   - training_set_v0
   uuid: ml/training/split
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     dynamic: true
@@ -164,7 +164,7 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: ml/training/train_doc
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -175,7 +175,7 @@ blocks:
   language: python
   name: ml/training/train
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: transformer
   upstream_blocks:
@@ -198,7 +198,7 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: ml/training/evaluate_doc
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     reduce_output: true
@@ -210,7 +210,7 @@ blocks:
   language: python
   name: ml/training/evaluate
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: transformer
   upstream_blocks:
@@ -231,7 +231,7 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: ml/training/explain_doc
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks: []
@@ -241,7 +241,7 @@ blocks:
   language: python
   name: ml/training/explain
   retry_config: null
-  status: failed
+  status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:
