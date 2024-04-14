@@ -5,7 +5,7 @@
     width="500"
 />
 
-# TLDR
+## TLDR
 
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/ml.jpg?raw=true"
@@ -20,9 +20,15 @@
 1. Experiment
 1. Retrain
 
-<br />
+---
 
-# 🕵️‍♀️ Define problem
+## Setup
+
+1. TBD
+
+---
+
+## 🕵️‍♀️ Define problem
 
 Clearly state the business problem you're trying to solve with machine learning and your hypothesis for how it can be solved.
 
@@ -35,9 +41,9 @@ Clearly state the business problem you're trying to solve with machine learning 
 
 <video src="https://github.com/mage-ai/assets/assets/1066980/23d45e9e-cd03-4598-973d-590008788eb6"></video>
 
-<br />
+---
 
-# 💾 Prepare data
+## 💾 Prepare data
 
 Collect data from various sources, generate additional training data if needed, and
 perform feature engineering to transform the raw data into a set of useful input features.
@@ -54,19 +60,19 @@ perform feature engineering to transform the raw data into a set of useful input
 
 <br />
 
-## Collecting and combining core user data
+### Collecting and combining core user data
 
 <video src="https://github.com/mage-ai/assets/assets/1066980/06334154-96c1-48ae-9045-615175184ffa"></video>
 
 <br />
 
-## Feature engineering
+### Feature engineering
 
 <video src="https://github.com/mage-ai/assets/assets/1066980/5c8749aa-630e-4622-b7a9-35273feda140"></video>
 
-<br />
+---
 
-# 🦾 Train and evaluate
+## 🦾 Train and evaluate
 
 Use the training data to teach the machine learning model to make accurate predictions.
 Evaluate the trained model's performance on a test set.
@@ -85,9 +91,9 @@ Evaluate the trained model's performance on a test set.
 
 <video src="https://github.com/mage-ai/assets/assets/1066980/5a4d86f8-3f0b-41c2-9127-99620bd5fe0e"></video>
 
-<br />
+---
 
-# 🤖 Deploy and integrate
+## 🤖 Deploy and integrate
 
 Deploy the trained model to a production environment to generate predictions on new data,
 either in real-time via an API or in batch pipelines.
@@ -110,23 +116,23 @@ Integrate the model's predictions with other business applications.
 
 <br />
 
-## Feature store and fetching
+### Feature store and fetching
 
 <video src="https://github.com/mage-ai/assets/assets/1066980/7deeee51-0fcb-44bf-8192-ae48b2bac0c7"></video>
 
-## Batch offline predictions
+### Batch offline predictions
 
 <video src="https://github.com/mage-ai/assets/assets/1066980/0ce55744-8058-4b79-8699-d09c16f6aa0e"></video>
 
 <br />
 
-## Real-time online predictions
+### Real-time online predictions
 
 <video src="https://github.com/mage-ai/assets/assets/1066980/5c8749aa-630e-4622-b7a9-35273feda140"></video>
 
-<br />
+---
 
-# 🔭 Observe
+## 🔭 Observe
 
 Monitor the deployed model's prediction performance, latency, and system health in the production environment.
 
@@ -141,7 +147,9 @@ Monitor the deployed model's prediction performance, latency, and system health 
     width="500"
 />
 
-# 🧪 Experiment
+---
+
+## 🧪 Experiment
 
 Conduct controlled experiments like A/B tests to measure the impact of the model's predictions on
 business metrics. Compare the new model's performance to a control model or previous model versions.
@@ -157,9 +165,9 @@ business metrics. Compare the new model's performance to a control model or prev
     width="500"
 />
 
-<br />
+---
 
-# 🏋️ Retrain
+## 🏋️ Retrain
 
 Continuously gather new training data and retrain the model periodically to maintain and
 improve prediction performance.
@@ -175,9 +183,9 @@ improve prediction performance.
     width="500"
 />
 
-<br />
+---
 
-# Conclusion
+## Conclusion
 
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/ml%20tools.jpg?raw=true"
