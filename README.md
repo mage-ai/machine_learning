@@ -56,9 +56,11 @@ perform feature engineering to transform the raw data into a set of useful input
 
 1. The pipeline [`core_data_users_v0`](http://localhost:6789/pipelines/core_data_users_v0/edit)
    contains 3 tables that are joined together.
+
 1. Pipeline [`prepare_data`](http://localhost:6789/pipelines/prepare_data/edit) is used in multiple
    other pipeline to perform data preparation on input datasets.
-   1. For example, the [`ml_training`](http://localhost:6789/pipelines/ml_training/edit)
+
+      1. For example, the [`ml_training`](http://localhost:6789/pipelines/ml_training/edit)
       pipeline that’s responsible for training an ML model will first run the above 2 pipelines to
       build the training set that’s used to train and test the model.
 
@@ -186,11 +188,17 @@ improve prediction performance.
 
 <br />
 
-1. Example coming soon.
+1. Every 2 hours, the retraining pipeline named
+   [`ml_retraining_model`](http://localhost:6789/pipelines/ml_retraining_model/edit) will run.
+
+1. The retraining pipeline triggers the [`ml_training`](http://localhost:6789/pipelines/ml_training/edit)
+    pipeline if the following contrived condition is met:
+
+    1. The number of partitions created for the `core_data.users_v0` data product is divisible by 4.
 
 <br />
 
-<img src="https://github.com/mage-ai/assets/blob/main/machine-learning/retrain.png?raw=true" />
+<video src="https://github.com/mage-ai/assets/assets/1066980/885eec0f-71b2-4485-87b1-e0931ec16537"></video>
 
 ---
 
