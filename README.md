@@ -26,7 +26,7 @@
 
 Clearly state the business problem you're trying to solve with machine learning and your hypothesis for how it can be solved.
 
-[![Everything Is AWESOME](https://i.stack.imgur.com/q3ceS.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Everything Is AWESOME")
+<video src="https://github.com/rayytsn9/ROBOTT/assets/79029536/62f541aa-aa8c-43f5-9ead-4b7a2e0d7c2a" width="300" />
 
 1. Open pipeline [`define_problem`](http://localhost:6789/pipelines/define_problem/edit).
 1. Define the problem and your hypothesis.
