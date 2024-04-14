@@ -1,16 +1,8 @@
 # [The definitive end-to-end machine learning (ML lifecycle) guide and tutorial for data engineers](https://www.notion.so/mageai/The-definitive-end-to-end-machine-learning-ML-lifecycle-guide-and-tutorial-for-data-engineers-ea24db5e562044c29d7227a67e70fd56?pvs=4)
 
-<img
-    src="https://github.com/mage-ai/assets/blob/main/machine-learning/mage-ml-guide.png?raw=true"
-    width="500"
-/>
+<img src="https://github.com/mage-ai/assets/blob/main/machine-learning/mage-ml-guide.png?raw=true" />
 
 ## TLDR
-
-<img
-    src="https://github.com/mage-ai/assets/blob/main/machine-learning/ml.jpg?raw=true"
-    width="500"
-/>
 
 1. Define problem
 1. Prepare data
@@ -20,18 +12,22 @@
 1. Experiment
 1. Retrain
 
+<img src="https://github.com/mage-ai/assets/blob/main/machine-learning/ml.jpg?raw=true" />
+
 ---
 
 ## Setup
 
 1. Clone the repository: `git clone https://github.com/mage-ai/machine_learning.git`.
     1. Stay in the same directory that you executed this command in; don’t change directory.
+
 1. Run Docker:
     ```bash
     docker run -it -p 6789:6789 -v $(pwd):/home/src mageai/mageai /app/run_app.sh mage start machine_learning
     ```
 
     If you don’t use MacOS or Linux, check out other examples in Mage’s [quick start guide](https://docs.mage.ai/getting-started/setup).
+
 1. Open a browser and go to [http://localhost:6789](http://localhost:6789).
 
 ---
@@ -164,10 +160,7 @@ Monitor the deployed model's prediction performance, latency, and system health 
 
 <br />
 
-<img
-    src="https://github.com/mage-ai/assets/blob/main/machine-learning/observe.png?raw=true"
-    width="500"
-/>
+<img src="https://github.com/mage-ai/assets/blob/main/machine-learning/observe.png?raw=true" />
 
 ---
 
@@ -182,10 +175,7 @@ business metrics. Compare the new model's performance to a control model or prev
 
 <br />
 
-<img
-    src="https://github.com/mage-ai/assets/blob/main/machine-learning/experiment.png?raw=true"
-    width="500"
-/>
+<img src="https://github.com/mage-ai/assets/blob/main/machine-learning/experiment.png?raw=true" />
 
 ---
 
@@ -200,10 +190,7 @@ improve prediction performance.
 
 <br />
 
-<img
-    src="https://github.com/mage-ai/assets/blob/main/machine-learning/retrain.png?raw=true"
-    width="500"
-/>
+<img src="https://github.com/mage-ai/assets/blob/main/machine-learning/retrain.png?raw=true" />
 
 ---
 
