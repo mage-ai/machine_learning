@@ -7,7 +7,7 @@ if 'data_exporter' not in globals():
 
 
 @data_exporter
-def export_data(df_numbers, df_categories, number_columns, *args, **kwargs):
+def export_data(number_columns, df_numbers, df_categories, *args, **kwargs):
     df = pd.concat([
         df_categories.drop(columns=get_numeric_columns(df_categories)), 
         df_numbers,

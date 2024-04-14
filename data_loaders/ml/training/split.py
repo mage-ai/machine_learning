@@ -9,7 +9,8 @@ if 'test' not in globals():
 
 
 @data_loader
-def load_data(data, configurations, *args, **kwargs):
+def load_data(configurations, data, *args, **kwargs):
+    print(data)
     label_feature_name = configurations['label_feature_name']
 
     df = pd.DataFrame()

@@ -132,7 +132,7 @@ blocks:
   language: python
   name: prepare_data/feature_engineering/remove_and_repair_features
   retry_config: null
-  status: updated
+  status: failed
   timeout: null
   type: transformer
   upstream_blocks: []
@@ -338,7 +338,7 @@ blocks:
   language: python
   name: prepare_data/feature_engineering/select_features
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:

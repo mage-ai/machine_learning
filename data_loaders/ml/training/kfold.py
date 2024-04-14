@@ -8,7 +8,7 @@ if 'test' not in globals():
 
 
 @data_loader
-def load_data(data, configurations, *args, **kwargs):
+def load_data(configurations, data, *args, **kwargs):
     label_classes, X, y = data
 
     kf = StratifiedKFold(

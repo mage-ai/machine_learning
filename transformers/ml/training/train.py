@@ -13,7 +13,7 @@ if 'test' not in globals():
 
 
 @transformer
-def transform(training_set, split_indexes, configurations, *args, **kwargs):
+def transform(configurations, training_set, split_indexes, *args, **kwargs):
     train_index, test_index = split_indexes
     label_classes, X, y = training_set
 
@@ -28,6 +28,7 @@ def transform(training_set, split_indexes, configurations, *args, **kwargs):
         use_label_encoder=True,
         verbosity=3,   
     )
+    
     model = xgb.XGBClassifier(**hyperparameters)
     model.fit(
         X_train,

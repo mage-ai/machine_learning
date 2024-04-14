@@ -37,13 +37,12 @@ blocks:
   configuration:
     global_data_product:
       outdated_after:
-        seconds: 3600
+        seconds: 119
       settings:
         prepare_data/feature_engineering/add_and_combine_features:
           partitions: 1
       uuid: core_data_users_v0
   downstream_blocks:
-  - core_data_users_v0/prepare_data
   - training_set_v0
   executor_config: null
   executor_type: local_python
@@ -59,25 +58,12 @@ blocks:
 - all_upstream_blocks_executed: true
   color: null
   configuration:
-    file_source:
-      path: data_loaders/core_data_users_v0/prepare_data.py
-  downstream_blocks: []
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: python
-  name: core_data_users_v0/prepare_data
-  retry_config: null
-  status: executed
-  timeout: null
-  type: data_loader
-  upstream_blocks:
-  - core_data_users_v0
-  uuid: core_data_users_v0/prepare_data
-- all_upstream_blocks_executed: true
-  color: null
-  configuration:
     global_data_product:
+      outdated_after:
+        seconds: 120
+      settings:
+        prepare_data/feature_engineering/select_features:
+          partitions: 1
       uuid: training_set_v0
   downstream_blocks:
   - ml/training/split
@@ -86,14 +72,14 @@ blocks:
   has_callback: false
   language: python
   name: training_set_v0
-  retry_config: null
-  status: failed
+  retry_config: {}
+  status: executed
   timeout: null
   type: global_data_product
   upstream_blocks:
   - core_data_users_v0
   uuid: training_set_v0
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     dynamic: false
@@ -107,7 +93,7 @@ blocks:
   language: python
   name: ml/training/split
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_loader
   upstream_blocks:

@@ -11,7 +11,7 @@ if 'data_exporter' not in globals():
 
 
 @data_exporter
-def export_data(evaluation, data,  *args, **kwargs):
+def export_data(data, evaluation,  *args, **kwargs):
     label_classes, X, y = data
 
     for model_file_path, metrics in evaluation:
