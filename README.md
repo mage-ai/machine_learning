@@ -122,10 +122,14 @@ Integrate the model's predictions with other business applications.
 
 Monitor the deployed model's prediction performance, latency, and system health in the production environment.
 
+<br />
+
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/observe.png?raw=true"
     width="500"
 />
+
+1. Example coming soon.
 
 <br />
 
@@ -134,22 +138,30 @@ Monitor the deployed model's prediction performance, latency, and system health 
 Conduct controlled experiments like A/B tests to measure the impact of the model's predictions on
 business metrics. Compare the new model's performance to a control model or previous model versions.
 
+<br />
+
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/experiment.png?raw=true"
     width="500"
 />
 
+1. Example coming soon.
+
 <br />
 
-# 🏋️ Retrain
+# 🏋️ Retrain
 
 Continuously gather new training data and retrain the model periodically to maintain and
 improve prediction performance.
+
+<br />
 
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/retrain.png?raw=true"
     width="500"
 />
+
+1. Example coming soon.
 
 <br />
 
