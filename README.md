@@ -136,7 +136,21 @@ Integrate the model's predictions with other business applications.
 
 ### Real-time online predictions
 
-<video src="https://github.com/mage-ai/assets/assets/1066980/5c8749aa-630e-4622-b7a9-35273feda140"></video>
+1. The pipeline used for online inference is called
+    [`ml_inference_online`](http://localhost:6789/pipelines/ml_inference_online/edit).
+
+1. Before interacting with the online predictions pipeline, you must first create an API trigger for
+    [`ml_inference_online`](http://localhost:6789/pipelines/ml_inference_online/edit) pipeline.
+    You can follow the [general instructions](https://docs.mage.ai/orchestration/triggers/trigger-pipeline-api)
+    to create an API trigger.
+
+1. The video below is for the pipeline named
+    [`ml_playground`](http://localhost:6789/pipelines/ml_playground/edit), which contains
+    [no-code UI interactions](https://docs.mage.ai/interactions/overview) to make it easy to
+    play around with the online predictions.
+
+<video src="https://github.com/mage-ai/assets/assets/1066980/f101bda8-603b-47bb-ae88-7c825dbdba08"></video>
+
 
 ---
 
