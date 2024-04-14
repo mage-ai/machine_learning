@@ -27,8 +27,6 @@
 Clearly state the business problem you're trying to solve with machine learning and your hypothesis for how it can be solved.
 
 <video
-    controls
-    className="w-full aspect-video"
     src="https://github.com/mage-ai/assets/raw/main/machine-learning/videos/core-data-users.mp4">
 </video>
 
