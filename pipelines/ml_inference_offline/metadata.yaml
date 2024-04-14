@@ -1,6 +1,40 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: ml/inference/offline/overview_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: ml/inference/offline/overview_doc
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
 created_at: '2024-04-13 22:14:12.371403+00:00'
+data_integration: null
 description: Offline batch predictions
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
 name: ML inference offline
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
 tags: []
 type: python
 uuid: ml_inference_offline
+variables_dir: /root/.mage_data/machine_learning
+widgets: []

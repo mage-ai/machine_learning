@@ -338,7 +338,7 @@ blocks:
   language: python
   name: prepare_data/feature_engineering/select_features
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_exporter
   upstream_blocks:
