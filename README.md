@@ -59,6 +59,10 @@ Evaluate the trained model's performance on a test set.
 
 # 🤖 Deploy and integrate
 
+Deploy the trained model to a production environment to generate predictions on new data,
+either in real-time via an API or in batch pipelines.
+Integrate the model's predictions with other business applications.
+
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/deploy%20model.png?raw=true"
     width="500"
@@ -67,6 +71,8 @@ Evaluate the trained model's performance on a test set.
 <br />
 
 # 🔭 Observe
+
+Monitor the deployed model's prediction performance, latency, and system health in the production environment.
 
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/observe.png?raw=true"
@@ -77,6 +83,9 @@ Evaluate the trained model's performance on a test set.
 
 # 🧪 Experiment
 
+Conduct controlled experiments like A/B tests to measure the impact of the model's predictions on
+business metrics. Compare the new model's performance to a control model or previous model versions.
+
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/experiment.png?raw=true"
     width="500"
@@ -85,6 +94,9 @@ Evaluate the trained model's performance on a test set.
 <br />
 
 # 🏋️ Retrain
+
+Continuously gather new training data and retrain the model periodically to maintain and
+improve prediction performance.
 
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/retrain.png?raw=true"
