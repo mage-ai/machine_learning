@@ -20,70 +20,78 @@
 1. Experiment
 1. Retrain
 
----
+<br />
 
-# Define problem
+# 🕵️‍♀️ Define problem
+
+Clearly state the business problem you're trying to solve with machine learning and your hypothesis for how it can be solved.
 
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/define%20problem.png?raw=true"
     width="500"
 />
 
----
+<br />
 
-# Prepare data
+# 💾 Prepare data
+
+Collect data from various sources, generate additional training data if needed, and
+perform feature engineering to transform the raw data into a set of useful input features.
 
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/data%20preparation%201.png?raw=true"
     width="500"
 />
 
----
+<br />
 
-# Train and evaluate
+# 🦾 Train and evaluate
+
+Use the training data to teach the machine learning model to make accurate predictions.
+Evaluate the trained model's performance on a test set.
 
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/model%20training.png?raw=true"
     width="500"
 />
 
----
+<br />
 
-# Deploy and integrate
+# 🤖 Deploy and integrate
 
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/deploy%20model.png?raw=true"
     width="500"
 />
 
----
+<br />
 
-# Observe
+# 🔭 Observe
 
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/observe.png?raw=true"
     width="500"
 />
 
----
+<br />
 
-# Experiment
+# 🧪 Experiment
 
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/experiment.png?raw=true"
     width="500"
 />
 
----
+<br />
 
-# Retrain
+# 🏋️ Retrain
 
 <img
     src="https://github.com/mage-ai/assets/blob/main/machine-learning/retrain.png?raw=true"
     width="500"
 />
 
----
+<br />
 
 # Conclusion
 

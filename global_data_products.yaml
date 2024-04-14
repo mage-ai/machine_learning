@@ -36,7 +36,5 @@ user_feature_store:
     seconds: 86400
     weeks: null
   settings:
-    ml/feature_fetching/user_feature_store:
-      partitions: 1
     ml/feature_fetching/user_features:
       partitions: 1

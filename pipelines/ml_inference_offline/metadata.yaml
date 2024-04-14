@@ -19,8 +19,6 @@ blocks:
   configuration:
     global_data_product:
       settings:
-        ml/feature_fetching/user_feature_store:
-          partitions: 1
         ml/feature_fetching/user_features:
           partitions: 1
       uuid: user_feature_store

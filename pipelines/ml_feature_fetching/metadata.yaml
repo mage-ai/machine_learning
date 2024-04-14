@@ -85,10 +85,9 @@ blocks:
 - all_upstream_blocks_executed: true
   color: null
   configuration:
-    dynamic: true
+    dynamic: false
   downstream_blocks:
   - feature_profiles_for_ml/feature_fetching/user_fan_out
-  - ml/feature_fetching/user_feature_store
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -102,22 +101,6 @@ blocks:
   - ml/feature_fetching/prepare_features
   - ml/feature_fetching/configurations
   uuid: ml/feature_fetching/user_features
-- all_upstream_blocks_executed: true
-  color: null
-  configuration: {}
-  downstream_blocks: []
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: python
-  name: ml/feature_fetching/user_feature_store
-  retry_config: null
-  status: executed
-  timeout: null
-  type: data_exporter
-  upstream_blocks:
-  - ml/feature_fetching/user_features
-  uuid: ml/feature_fetching/user_feature_store
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config:
