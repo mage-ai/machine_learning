@@ -34,7 +34,6 @@ def transform(data, *args, **kwargs):
         model = joblib.load(f)
 
     n_label_classes = len(label_classes)
-    print(X_test)
     y_pred = model.predict(X_test)
 
     print('Sample predictions:')

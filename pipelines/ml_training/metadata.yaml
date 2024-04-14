@@ -7,13 +7,28 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: markdown
-  name: ml/training/split_doc
+  name: ml/training/overview_doc
   retry_config: null
   status: updated
   timeout: null
   type: markdown
   upstream_blocks: []
-  uuid: ml/training/split_doc
+  uuid: ml/training/overview_doc
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: ml/training/training_set_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: ml/training/training_set_doc
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
@@ -55,6 +70,21 @@ blocks:
   type: global_data_product
   upstream_blocks: []
   uuid: core_data_users_v0
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: ml/training/split_doc
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: ml/training/split_doc
 - all_upstream_blocks_executed: true
   color: null
   configuration:

@@ -28,7 +28,6 @@ def transform(configurations, training_set, split_indexes, *args, **kwargs):
         use_label_encoder=True,
         verbosity=3,   
     )
-    
     model = xgb.XGBClassifier(**hyperparameters)
     model.fit(
         X_train,
@@ -37,7 +36,13 @@ def transform(configurations, training_set, split_indexes, *args, **kwargs):
     )
 
     split_index = kwargs.get('split_index', 0)
-    model_file_path = os.path.join(get_repo_path(), 'models', 'ml', f'model_{split_index}.joblib')
+    model_file_path = os.path.join(
+        get_repo_path(), 
+        'models', 
+        'ml', 
+        kwargs['ds']
+        f'model_{split_index}.joblib',
+    )
     os.makedirs(os.path.dirname(model_file_path), exist_ok=True)
 
     with open(model_file_path, 'wb') as f:
