@@ -26,6 +26,8 @@
 
 Clearly state the business problem you're trying to solve with machine learning and your hypothesis for how it can be solved.
 
+<br />
+
 <video src="https://github.com/mage-ai/assets/assets/1066980/23d45e9e-cd03-4598-973d-590008788eb6"></video>
 
 <br />
@@ -39,6 +41,8 @@ Clearly state the business problem you're trying to solve with machine learning 
 
 Collect data from various sources, generate additional training data if needed, and
 perform feature engineering to transform the raw data into a set of useful input features.
+
+<br />
 
 <video src="https://github.com/mage-ai/assets/assets/1066980/5c8749aa-630e-4622-b7a9-35273feda140"></video>
 
@@ -58,6 +62,8 @@ perform feature engineering to transform the raw data into a set of useful input
 
 Use the training data to teach the machine learning model to make accurate predictions.
 Evaluate the trained model's performance on a test set.
+
+<br />
 
 <video src="https://github.com/mage-ai/assets/assets/1066980/5a4d86f8-3f0b-41c2-9127-99620bd5fe0e"></video>
 
@@ -79,9 +85,7 @@ Deploy the trained model to a production environment to generate predictions on 
 either in real-time via an API or in batch pipelines.
 Integrate the model's predictions with other business applications.
 
-## Feature store and fetching
-
-<video src="https://github.com/mage-ai/assets/assets/1066980/7deeee51-0fcb-44bf-8192-ae48b2bac0c7"></video>
+<br />
 
 1. Once the model is done training and has been packaged for deployment, before we can use it to
    make predictions, we’ll need to setup our feature store that’ll serve user features on-demand
@@ -95,6 +99,12 @@ Integrate the model's predictions with other business applications.
    pipeline serves real-time model predictions and can be interacted with via an API request.
    1. Use the [`ML playground`](http://localhost:6789/pipelines/ml_playground/edit)
       to interact with this model and make online predictions.
+
+<br />
+
+## Feature store and fetching
+
+<video src="https://github.com/mage-ai/assets/assets/1066980/7deeee51-0fcb-44bf-8192-ae48b2bac0c7"></video>
 
 ## Batch offline predictions
 
