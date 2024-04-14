@@ -11,6 +11,7 @@ Planeswalker sends regular emails to users, but is experiencing a high unsubscri
 
 To reduce unsubscribes, Planeswalker should personalize email content for each user based on their app profile data. By predicting and including the most relevant content for a specific user, the emails will be more engaging.
 
+
 <br />
 
 # Hypothesis

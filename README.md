@@ -26,10 +26,7 @@
 
 Clearly state the business problem you're trying to solve with machine learning and your hypothesis for how it can be solved.
 
-<img
-    src="https://github.com/mage-ai/assets/blob/main/machine-learning/define%20problem.png?raw=true"
-    width="500"
-/>
+<video src="https://github.com/mage-ai/assets/assets/1066980/23d45e9e-cd03-4598-973d-590008788eb6"></video>
 
 1. Open pipeline [`define_problem`](http://localhost:6789/pipelines/define_problem/edit).
 1. Define the problem and your hypothesis.
